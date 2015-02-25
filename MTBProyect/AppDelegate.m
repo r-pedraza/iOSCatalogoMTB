@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "RPLModel.h"
+#import "RPLMtbViewController.h"
+#import "RPLWebViewController.h"
+#import "RPLBrandModel.h"
+#import "RPLBrandTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +22,42 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    
+    
+   //Creamos modelo
+    RPLBrandModel *model=[[RPLBrandModel alloc]init];
+    
+    //Creamos los controladores
+    RPLBrandTableViewController *bikeTable= [[RPLBrandTableViewController alloc]initWithModel:model
+                                                                                    style:UITableViewStylePlain];
+    
+    
+    RPLMtbViewController *bikeView=[[RPLMtbViewController alloc]initWithModel:[model sctottBikeAtIndex:0]];
+    
+    //Creamos el combinador
+    UINavigationController *brandNavigation=[[UINavigationController alloc]initWithRootViewController:bikeTable];
+    UINavigationController *bikeNavigation=[[UINavigationController alloc]initWithRootViewController:bikeView];
+
+    
+    
+    //Creamos split
+    UISplitViewController *split=[[UISplitViewController alloc]init];
+    
+    //Asignamos delegados
+    split.delegate=bikeView;
+    bikeTable.delegate=bikeView;
+    
+    //El split contendrá lo navigation controller
+    split.viewControllers=@[brandNavigation,bikeNavigation];
+    
+    //Lo asignamos al controlador raiz.
+    self.window.rootViewController=split;
+    
+    
+    
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
