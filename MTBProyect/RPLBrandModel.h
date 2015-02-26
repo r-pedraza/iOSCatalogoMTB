@@ -15,11 +15,14 @@
 @property(readonly,nonatomic)int scottBikeCount;
 @property(readonly,nonatomic)int specializedBikeCount;
 @property(readonly,nonatomic)int trekBikeCount;
+@property(readonly,nonatomic)int intenseBikeCount;
 
 
 //Métodos para contar el umero de biciletas de cada marca
 -(RPLModel*)sctottBikeAtIndex:(int)index;
 -(RPLModel*)specializedBikeAtIndex:(int)index;
 -(RPLModel*)trekBikeAtIndex:(int)index;
+-(RPLModel*)intenseBikeAtIndex:(int)index;
+
 
 @end

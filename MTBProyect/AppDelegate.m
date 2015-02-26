@@ -23,6 +23,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    //Color para la navigation
+    [[UINavigationBar appearance]setBarTintColor:[UIColor colorWithRed:239.0/255
+                                                                 green:239.0/255
+                                                                  blue:244.0/255
+                                                                   alpha:1]];
+                                                  
+                                                  
+    //Color para el título del Navigation
+    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.0/255 green:92.0/255 blue:255.0/255 alpha:1]}];
+    
+    
+    
+   
     
     
    //Creamos modelo
@@ -31,6 +44,10 @@
     //Creamos los controladores
     RPLBrandTableViewController *bikeTable= [[RPLBrandTableViewController alloc]initWithModel:model
                                                                                     style:UITableViewStylePlain];
+    [[UITableView appearance]setBackgroundColor:[UIColor colorWithRed:239.0/255
+                                                               green:239.0/255
+                                                                blue:244.0/255
+                                                                alpha:1]];
     
     
     RPLMtbViewController *bikeView=[[RPLMtbViewController alloc]initWithModel:[model sctottBikeAtIndex:0]];
@@ -38,11 +55,13 @@
     //Creamos el combinador
     UINavigationController *brandNavigation=[[UINavigationController alloc]initWithRootViewController:bikeTable];
     UINavigationController *bikeNavigation=[[UINavigationController alloc]initWithRootViewController:bikeView];
-
+    
     
     
     //Creamos split
     UISplitViewController *split=[[UISplitViewController alloc]init];
+    
+   
     
     //Asignamos delegados
     split.delegate=bikeView;
@@ -53,9 +72,6 @@
     
     //Lo asignamos al controlador raiz.
     self.window.rootViewController=split;
-    
-    
-    
     
     
     self.window.backgroundColor = [UIColor whiteColor];

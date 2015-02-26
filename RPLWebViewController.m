@@ -62,8 +62,7 @@
 
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    
+    [super viewWillDisappear:animated];
     
   
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -87,11 +86,10 @@
 }
 
 -(void) webViewDidStartLoad:(UIWebView *)webView{
-    NSLog(@"empezó");
 }
 
 -(void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    NSLog(@"La jodimos %@", error);
+    NSLog(@"Error en carga Web %@", error);
 }
 
 

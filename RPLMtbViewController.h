@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class  RPLModel;
-@class RPLBrandTableViewController;
+#import "RPLBrandTableViewController.h"
 
-@interface RPLMtbViewController : UIViewController  <UISplitViewControllerDelegate>
+@interface RPLMtbViewController : UIViewController  <UISplitViewControllerDelegate, BrandTableViewControllerDelegate>
 
 @property(strong,nonatomic)RPLModel *model;
 @property (weak, nonatomic) IBOutlet UIImageView *photoLabel;

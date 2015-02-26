@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		573399FE1A9BAA1800C44DE4 /* scott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 573399FD1A9BAA1800C44DE4 /* scott.jpg */; };
 		57339A021A9BB36000C44DE4 /* RPLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57339A001A9BB36000C44DE4 /* RPLWebViewController.m */; };
+		5795D9161A9E04CF0076B77E /* logoScott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5795D9151A9E04CF0076B77E /* logoScott.jpg */; };
+		5795D91A1A9E06550076B77E /* RPLBikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5795D9181A9E06550076B77E /* RPLBikeTableViewCell.m */; };
+		5795D91B1A9E06550076B77E /* RPLBikeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5795D9191A9E06550076B77E /* RPLBikeTableViewCell.xib */; };
 		57A10F991A9B5DA400722C46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A10F981A9B5DA400722C46 /* main.m */; };
 		57A10F9C1A9B5DA400722C46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A10F9B1A9B5DA400722C46 /* AppDelegate.m */; };
 		57A10F9E1A9B5DA400722C46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A10F9D1A9B5DA400722C46 /* Images.xcassets */; };
@@ -20,6 +23,12 @@
 		57A4FF601A9C9F460033BBB9 /* trek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57A4FF5F1A9C9F460033BBB9 /* trek.jpg */; };
 		57A4FF631A9CA7FC0033BBB9 /* RPLBrandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A4FF621A9CA7FC0033BBB9 /* RPLBrandModel.m */; };
 		57A4FF6B1A9CAF5C0033BBB9 /* RPLBrandTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A4FF6A1A9CAF5C0033BBB9 /* RPLBrandTableViewController.m */; };
+		57DCFB3D1A9F279F00DC7069 /* logoTrek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57DCFB3C1A9F279F00DC7069 /* logoTrek.jpg */; };
+		57DCFB431A9F2A9400DC7069 /* logoSpecialized.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57DCFB421A9F2A9400DC7069 /* logoSpecialized.jpg */; };
+		57DCFB451A9F2CDB00DC7069 /* intense.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57DCFB441A9F2CDB00DC7069 /* intense.jpg */; };
+		57DCFB471A9F30E400DC7069 /* logoIntense.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57DCFB461A9F30E400DC7069 /* logoIntense.jpg */; };
+		57DCFB801A9F547600DC7069 /* RPLTypeBikeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DCFB7E1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.m */; };
+		57DCFB811A9F547600DC7069 /* RPLTypeBikeCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DCFB7F1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.xib */; };
 		57FA77821A9B8EA10034D758 /* RPLMtbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FA77801A9B8EA10034D758 /* RPLMtbViewController.m */; };
 		57FA77831A9B8EA10034D758 /* RPLMtbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FA77811A9B8EA10034D758 /* RPLMtbViewController.xib */; };
 /* End PBXBuildFile section */
@@ -38,6 +47,10 @@
 		573399FD1A9BAA1800C44DE4 /* scott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scott.jpg; sourceTree = "<group>"; };
 		573399FF1A9BB36000C44DE4 /* RPLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLWebViewController.h; sourceTree = "<group>"; };
 		57339A001A9BB36000C44DE4 /* RPLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLWebViewController.m; sourceTree = "<group>"; };
+		5795D9151A9E04CF0076B77E /* logoScott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoScott.jpg; sourceTree = "<group>"; };
+		5795D9171A9E06550076B77E /* RPLBikeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLBikeTableViewCell.h; sourceTree = "<group>"; };
+		5795D9181A9E06550076B77E /* RPLBikeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLBikeTableViewCell.m; sourceTree = "<group>"; };
+		5795D9191A9E06550076B77E /* RPLBikeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPLBikeTableViewCell.xib; sourceTree = "<group>"; };
 		57A10F931A9B5DA400722C46 /* MTBProyect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTBProyect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A10F971A9B5DA400722C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57A10F981A9B5DA400722C46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +70,13 @@
 		57A4FF621A9CA7FC0033BBB9 /* RPLBrandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPLBrandModel.m; path = MTBProyect/RPLBrandModel.m; sourceTree = "<group>"; };
 		57A4FF691A9CAF5C0033BBB9 /* RPLBrandTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLBrandTableViewController.h; sourceTree = "<group>"; };
 		57A4FF6A1A9CAF5C0033BBB9 /* RPLBrandTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLBrandTableViewController.m; sourceTree = "<group>"; };
+		57DCFB3C1A9F279F00DC7069 /* logoTrek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoTrek.jpg; sourceTree = "<group>"; };
+		57DCFB421A9F2A9400DC7069 /* logoSpecialized.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoSpecialized.jpg; sourceTree = "<group>"; };
+		57DCFB441A9F2CDB00DC7069 /* intense.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intense.jpg; sourceTree = "<group>"; };
+		57DCFB461A9F30E400DC7069 /* logoIntense.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoIntense.jpg; sourceTree = "<group>"; };
+		57DCFB7D1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLTypeBikeCollectionViewController.h; sourceTree = "<group>"; };
+		57DCFB7E1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLTypeBikeCollectionViewController.m; sourceTree = "<group>"; };
+		57DCFB7F1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPLTypeBikeCollectionViewController.xib; sourceTree = "<group>"; };
 		57FA777F1A9B8EA10034D758 /* RPLMtbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLMtbViewController.h; sourceTree = "<group>"; };
 		57FA77801A9B8EA10034D758 /* RPLMtbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLMtbViewController.m; sourceTree = "<group>"; };
 		57FA77811A9B8EA10034D758 /* RPLMtbViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPLMtbViewController.xib; sourceTree = "<group>"; };
@@ -80,11 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5795D91C1A9E06830076B77E /* PersonalCell */ = {
+			isa = PBXGroup;
+			children = (
+				5795D9171A9E06550076B77E /* RPLBikeTableViewCell.h */,
+				5795D9181A9E06550076B77E /* RPLBikeTableViewCell.m */,
+				5795D9191A9E06550076B77E /* RPLBikeTableViewCell.xib */,
+			);
+			name = PersonalCell;
+			sourceTree = "<group>";
+		};
 		57A10F8A1A9B5DA400722C46 = {
 			isa = PBXGroup;
 			children = (
+				57DCFB461A9F30E400DC7069 /* logoIntense.jpg */,
+				57DCFB441A9F2CDB00DC7069 /* intense.jpg */,
+				57DCFB421A9F2A9400DC7069 /* logoSpecialized.jpg */,
+				57DCFB3C1A9F279F00DC7069 /* logoTrek.jpg */,
 				57A4FF5F1A9C9F460033BBB9 /* trek.jpg */,
 				57A4FF5D1A9C9D810033BBB9 /* specialized.jpg */,
+				5795D9151A9E04CF0076B77E /* logoScott.jpg */,
 				573399FD1A9BAA1800C44DE4 /* scott.jpg */,
 				57A10F951A9B5DA400722C46 /* MTBProyect */,
 				57A10FA91A9B5DA400722C46 /* MTBProyectTests */,
@@ -153,9 +188,22 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		57DCFB821A9F54CE00DC7069 /* PersonalCellCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				57DCFB7D1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.h */,
+				57DCFB7E1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.m */,
+				57DCFB7F1A9F547600DC7069 /* RPLTypeBikeCollectionViewController.xib */,
+			);
+			name = PersonalCellCollectionView;
+			path = MTBProyect;
+			sourceTree = "<group>";
+		};
 		57FA77841A9B8EA50034D758 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				57DCFB821A9F54CE00DC7069 /* PersonalCellCollectionView */,
+				5795D91C1A9E06830076B77E /* PersonalCell */,
 				57A4FF691A9CAF5C0033BBB9 /* RPLBrandTableViewController.h */,
 				57A4FF6A1A9CAF5C0033BBB9 /* RPLBrandTableViewController.m */,
 				57FA777F1A9B8EA10034D758 /* RPLMtbViewController.h */,
@@ -249,11 +297,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DCFB431A9F2A9400DC7069 /* logoSpecialized.jpg in Resources */,
+				5795D9161A9E04CF0076B77E /* logoScott.jpg in Resources */,
+				57DCFB811A9F547600DC7069 /* RPLTypeBikeCollectionViewController.xib in Resources */,
 				57FA77831A9B8EA10034D758 /* RPLMtbViewController.xib in Resources */,
+				57DCFB3D1A9F279F00DC7069 /* logoTrek.jpg in Resources */,
 				57A4FF5A1A9C97BA0033BBB9 /* RPLWebViewController.xib in Resources */,
 				573399FE1A9BAA1800C44DE4 /* scott.jpg in Resources */,
+				57DCFB471A9F30E400DC7069 /* logoIntense.jpg in Resources */,
+				5795D91B1A9E06550076B77E /* RPLBikeTableViewCell.xib in Resources */,
 				57A10FA11A9B5DA400722C46 /* LaunchScreen.xib in Resources */,
 				57A4FF601A9C9F460033BBB9 /* trek.jpg in Resources */,
+				57DCFB451A9F2CDB00DC7069 /* intense.jpg in Resources */,
 				57A4FF5E1A9C9D810033BBB9 /* specialized.jpg in Resources */,
 				57A10F9E1A9B5DA400722C46 /* Images.xcassets in Resources */,
 			);
@@ -274,10 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A10F9C1A9B5DA400722C46 /* AppDelegate.m in Sources */,
+				57DCFB801A9F547600DC7069 /* RPLTypeBikeCollectionViewController.m in Sources */,
 				57339A021A9BB36000C44DE4 /* RPLWebViewController.m in Sources */,
 				57A4FF6B1A9CAF5C0033BBB9 /* RPLBrandTableViewController.m in Sources */,
 				57A4FF631A9CA7FC0033BBB9 /* RPLBrandModel.m in Sources */,
 				57FA77821A9B8EA10034D758 /* RPLMtbViewController.m in Sources */,
+				5795D91A1A9E06550076B77E /* RPLBikeTableViewCell.m in Sources */,
 				57A10F991A9B5DA400722C46 /* main.m in Sources */,
 				57A10FB81A9B5DF800722C46 /* RPLModel.m in Sources */,
 			);

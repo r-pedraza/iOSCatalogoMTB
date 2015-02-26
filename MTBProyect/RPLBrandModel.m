@@ -15,6 +15,7 @@
 @property(strong,nonatomic) NSArray *scott;
 @property(strong,nonatomic) NSArray *specialized;
 @property(strong,nonatomic) NSArray *trek;
+@property(strong,nonatomic) NSArray *intense;
 
 
 @end
@@ -43,8 +44,16 @@
     
 }
 
+-(int)intenseBikeCount{
+
+    return [self.intense count];
+}
+
 -(instancetype)init{
+    
+    
     if (self=[super init]) {
+        
         RPLModel *scott1=[[RPLModel alloc]initWithType:@"MTB"
                                             sizeWheel:@"27,5"
                                         materialFrame:@"Carbono"
@@ -52,6 +61,7 @@
                                            components:@"XX1" info:@"sdhfjksdhfuhrsuhfiohsriohfiohrsiofghiorhiohioghiohguihpiushupithguihheroishguisohrgiohirosthgiohrtigoeriohgiortgiohewrioghioherguihweiueiruwhguierhgiouherioheriuwghuirw`hgiurtwhgiutrwhg8oiehgoierioghtiroeghjioerhtgiohweioghwerieiorw`ghioer"
                                               bikeWeb:[NSURL URLWithString:@"https://www.scott-sports.com/us/en/products/238185008/SCOTT-Spark-700-RC-Bike/"]
                                                 photo:[UIImage imageNamed:@"scott.jpg"]];
+        
         RPLModel *specialized1=[[RPLModel alloc]initWithType:@"MTB"
                                             sizeWheel:@"29"
                                         materialFrame:@"Carbono"
@@ -67,6 +77,16 @@
                                            components:@"XTR" info:@"sdhfjksdhfuhrsuhfiohsriohfiohrsiofghiorhiohioghiohguihpiushupithguihheroishguisohrgiohirosthgiohrtigoeriohgiortgiohewrioghioherguihweiueiruwhguierhgiouherioheriuwghuirw`hgiurtwhgiutrwhg8oiehgoierioghtiroeghjioerhtgiohweioghwerieiorw`ghioer"
                                               bikeWeb:[NSURL URLWithString:@"http://www.trekbikes.com/es/es/bikes/mountain/cross_country/superfly/"]
                                                 photo:[UIImage imageNamed:@"trek.jpg"]];
+        
+        
+        RPLModel *intense1=[[RPLModel alloc]initWithType:@"MTB"
+                                            sizeWheel:@"29"
+                                        materialFrame:@"Carbono"
+                                                brand:@"Intense Carbine"
+                                           components:@"XX1" info:@"sdhfjksdhfuhrsuhfiohsriohfiohrsiofghiorhiohioghiohguihpiushupithguihheroishguisohrgiohirosthgiohrtigoeriohgiortgiohewrioghioherguihweiueiruwhguierhgiouherioheriuwghuirw`hgiurtwhgiutrwhg8oiehgoierioghtiroeghjioerhtgiohweioghwerieiorw`ghioer"
+                                              bikeWeb:[NSURL URLWithString:@"http://intensecycles.com/carbine-29/"]
+                                                photo:[UIImage imageNamed:@"intense.jpg"]];
+        
         
         
         
@@ -99,6 +119,7 @@
         self.scott=@[scott1];
         self.specialized=@[specialized1];
         self.trek=@[trek1];
+        self.intense=@[intense1];
         
         
         
@@ -109,6 +130,7 @@
 }
 
 #pragma mark - CountBikes
+
 -(RPLModel*)sctottBikeAtIndex:(int)index{
     
     return [self.scott objectAtIndex:index];
@@ -124,6 +146,9 @@
     return [self.trek objectAtIndex:index];
 
 }
+-(RPLModel*)intenseBikeAtIndex:(int)index{
 
+    return [self.intense objectAtIndex:index];
+}
 
 @end

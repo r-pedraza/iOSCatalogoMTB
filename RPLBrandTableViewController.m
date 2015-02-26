@@ -11,6 +11,7 @@
 #import "RPLMtbViewController.h"
 #import "RPLBrandModel.h"
 #import "RPLBrandTableViewController.h"
+#import "RPLBikeTableViewCell.h"
 
 @interface RPLBrandTableViewController ()
 
@@ -35,12 +36,15 @@
     [super viewDidLoad];
     
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // Registramos el nib de la celda
+    UINib *nib = [UINib nibWithNibName:@"RPLBikeTableViewCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:[RPLBikeTableViewCell cellId]];
+    //Altura de la tabla
+    self.tableView.rowHeight=[RPLBikeTableViewCell height];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -51,57 +55,70 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 3;
+    return 4;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     
     
-    if (section==SCOTT_BRAND_SECCION) {
+    if (section == SCOTT_BRAND_SECCION) {
         
         return [self.model scottBikeCount];
         
-    }else if (section==SPECIALIZED_BRAND_SECCION) {
+    }else if (section == SPECIALIZED_BRAND_SECCION) {
         
         return [self.model specializedBikeCount];
         
-    }else {
+    }else if(section == TREK_BRAND_SECCION){
         
         return [self.model trekBikeCount];
+    }
+    else{
+    
+        return [self.model intenseBikeCount];
     }
     
 }
 
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(UITableView *)tableView
+        cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    static NSString *cellId=@"Cell";
     
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellId];
+    RPLBikeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:[RPLBikeTableViewCell cellId] forIndexPath:indexPath];
     
     
-    if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
-                                   reuseIdentifier:cellId];
-    }
-    //Averiar modelo bici
+
     RPLModel *model=nil;
     
     if (indexPath.section==SCOTT_BRAND_SECCION) {
+        
         model=[self.model sctottBikeAtIndex:indexPath.row];
+        cell.photoBike.image=[UIImage imageNamed:@"logoScott.jpg"];
+        cell.brandBikeLabel.text=@"Scott";
+        
     }else if (indexPath.section==SPECIALIZED_BRAND_SECCION){
+        
         model=[self.model specializedBikeAtIndex:indexPath.row];
-    }else{
+        cell.photoBike.image=[UIImage imageNamed:@"logoSpecialized.jpg"];
+        cell.brandBikeLabel.text=@"Specialized";
+        
+    }else if(indexPath.section==TREK_BRAND_SECCION){
     
         model=[self.model trekBikeAtIndex:indexPath.row];
+        cell.photoBike.image=[UIImage imageNamed:@"logoTrek.jpg"];
+        cell.brandBikeLabel.text=@"Trek";
+        
+    }else{
+    
+        model=[self.model intenseBikeAtIndex:indexPath.row];
+        cell.photoBike.image=[UIImage imageNamed:@"logoIntense.jpg"];
+        cell.brandBikeLabel.text=@"Intense";
+    
     }
     
-    
-    //Sincronizar celda y modelo
-    cell.imageView.image=model.photo;
-    cell.textLabel.text=model.brand;
-    
-    
+
     return cell;
 }
 
@@ -119,13 +136,20 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     RPLModel *model=nil;
     
     if (indexPath.section==SCOTT_BRAND_SECCION) {
+        
         model=[self.model sctottBikeAtIndex:indexPath.row];
+        
     }else if (indexPath.section==SPECIALIZED_BRAND_SECCION){
+        
         model=[self.model specializedBikeAtIndex:indexPath.row];
 
-    }else{
+    }else if (indexPath.section==TREK_BRAND_SECCION){
+        
         model=[self.model trekBikeAtIndex:indexPath.row];
 
+    }else{
+    
+        model=[self.model intenseBikeAtIndex:indexPath.row];
     }
     
     [self.delegate brandTableViewController:self
@@ -139,29 +163,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //Enviamos la notificacion
     [[NSNotificationCenter defaultCenter]postNotification:notication];
     
-    //nos damos de alta y de baja en el MtbView
 }
 
 
-- (NSString *)tableView:(UITableView *)tableView
-titleForHeaderInSection:(NSInteger)section {
-   
-    NSString *sectionName;
-    
-    switch (section) {
-            
-        case SCOTT_BRAND_SECCION: sectionName = @"Scott";
-            break;
-        case SPECIALIZED_BRAND_SECCION: sectionName = @"Specialized";
-            break;
-        case TREK_BRAND_SECCION: sectionName= @"Trek";
-        
-            break;
-    }
-    
-    return sectionName;
-
-}
 
 
 
