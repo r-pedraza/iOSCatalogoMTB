@@ -26,6 +26,7 @@
 
     if (self=[super initWithStyle:style]) {
         _model=model;
+        [self setTitle:@"MTB"];
     }
 
     return self;
@@ -130,6 +131,7 @@
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    
     
+    [self setTitle:@"MTB"];
     //Suponemos que estamos en un navigationController
     //Averiguamos de que bici se trata
 
@@ -152,8 +154,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         model=[self.model intenseBikeAtIndex:indexPath.row];
     }
     
-    [self.delegate brandTableViewController:self
-                              didSelectBike:model];
+    
+   [self.delegate brandTableViewController:self
+                            didSelectBike:model];
     
     
     //Avisamos se ha seleccionado un nuevo vino hemos avisado tanto al dekegado como al que esta escuchando nuestra notificacion

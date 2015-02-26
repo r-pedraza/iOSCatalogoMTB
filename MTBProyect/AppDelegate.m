@@ -23,6 +23,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    
+    
+    
     //Color para la navigation
     [[UINavigationBar appearance]setBarTintColor:[UIColor colorWithRed:239.0/255
                                                                  green:239.0/255
