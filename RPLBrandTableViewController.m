@@ -38,8 +38,12 @@
     
     
     // Registramos el nib de la celda
-    UINib *nib = [UINib nibWithNibName:@"RPLBikeTableViewCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:[RPLBikeTableViewCell cellId]];
+    UINib *nib = [UINib nibWithNibName:@"RPLBikeTableViewCell"
+                                bundle:[NSBundle mainBundle]];
+    
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:[RPLBikeTableViewCell cellId]];
+    
     //Altura de la tabla
     self.tableView.rowHeight=[RPLBikeTableViewCell height];
     
@@ -137,6 +141,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     RPLModel *model=nil;
     
+   
+    
     if (indexPath.section==SCOTT_BRAND_SECCION) {
         
         model=[self.model sctottBikeAtIndex:indexPath.row];
@@ -168,10 +174,20 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
 
+#pragma mark - BrandTableViewControllerDelegate
+-(void)brandTableViewController:(RPLBrandTableViewController*) bikeVC didSelectBike:(RPLModel*)bike{
+    
+    //Creamos el controlador
+    RPLMtbViewController *bikeController=[[RPLMtbViewController alloc]initWithModel:bike];
+    //Hacemos un push
+    [self.navigationController pushViewController:bikeController animated:YES];
 
 
+}
 
 
 
 
 @end
+
+

@@ -20,14 +20,13 @@
 #define BIKE_KEY @"bike"
 
 
-
 @protocol BrandTableViewControllerDelegate <NSObject>
 
 -(void)brandTableViewController:(RPLBrandTableViewController*) bikeVC didSelectBike:(RPLModel*)bike;
 
 @end
 
-@interface RPLBrandTableViewController : UITableViewController
+@interface RPLBrandTableViewController : UITableViewController<BrandTableViewControllerDelegate>
 
 @property(strong,nonatomic) RPLBrandModel *model;
 @property(weak,nonatomic) id <BrandTableViewControllerDelegate> delegate;

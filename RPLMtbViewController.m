@@ -20,14 +20,22 @@
 
 -(id)initWithModel:(RPLModel*) model{
     
+    NSString *nibName=nil;
+    
+    if (IS_IPHONE) {
+        nibName=@"RPLMtbViewControllerForiPhone";
+    }
+    
+    
     //Busca algun xib que se llame como el controlar y este en el bundle principal.
-    if (self=[super initWithNibName:nil bundle:nil]) {
+    if (self=[super initWithNibName:nibName bundle:nil]) {
         
         //el modelo se lo pasamos de manera explicita mediante un parámetro.
         _model=model;
         
         //El título de esta ventana será la marca de la bici que se esté cargando.
         self.title=self.model.brand;
+    
     }
     return self;
 
@@ -41,6 +49,10 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    if([[[UIDevice currentDevice] systemVersion] floatValue]>=7)
+    { self.edgesForExtendedLayout =UIRectEdgeNone;
+    }
     [self syncModelWithView];
     
 }
@@ -78,6 +90,14 @@
     //Numero de lineas del texto.
     [self.infoLabel setNumberOfLines:0];
     
+    //Ajustamos los label a su tamaño o reducimos la fuenste en su caso ya que en el iphone puede ocurrir que no quepa todo el texto
+    self.typeLabel.adjustsFontSizeToFitWidth=YES;
+    self.brandLabel.adjustsFontSizeToFitWidth=YES;
+    self.sizeWheelLabel.adjustsFontSizeToFitWidth=YES;
+    self.materialFrameLabel.adjustsFontSizeToFitWidth=YES;
+    self.componentsLabel.adjustsFontSizeToFitWidth=YES;
+    self.infoLabel.adjustsFontSizeToFitWidth=YES;
+   
 
 }
 

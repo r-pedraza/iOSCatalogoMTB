@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class  RPLModel;
 #import "RPLBrandTableViewController.h"
-
+#define IS_IPHONE  UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone
 @interface RPLMtbViewController : UIViewController  <UISplitViewControllerDelegate, BrandTableViewControllerDelegate>
 
 @property(strong,nonatomic)RPLModel *model;
